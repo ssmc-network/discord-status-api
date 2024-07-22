@@ -1,0 +1,13 @@
+services:
+  fastapi:
+    image: fastapi-docker:production
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+    ports:
+      - "80:80"
