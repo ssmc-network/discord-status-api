@@ -1,0 +1,17 @@
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.110.3"
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+pydantic-settings = "^2.2.1"
+py-cord = "^2.6.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.2"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
